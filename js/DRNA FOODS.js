@@ -19,6 +19,11 @@ fadeInSections.forEach(section => {
     observer.observe(section);
 });
 
+//for hamberger
+document.getElementById('hamburger-icon').addEventListener('click', function() {
+    var navList = document.getElementById('nav-list');
+    navList.classList.toggle('open');
+});
 // Product filter functionality
 const filterButtons = document.querySelectorAll('.product-filter button');
 const products = document.querySelectorAll('.product');
