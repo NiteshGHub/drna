@@ -8,6 +8,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
+    padding: 0;
     color: #333;
 }
 
@@ -170,10 +171,8 @@ nav ul li a:hover {
 }
 
 .featured-product img {
-    /* width: 50%;
-    border-radius: 10px; */
     width: 50%;
-    height: 40%;
+    height: auto;
     margin: 0.5rem 0;
 }
 
@@ -477,6 +476,7 @@ footer {
     }
     .featured-product img {
         width: 100%;
+        height: auto;
     }
     .featured-content {
         padding-left: 0;
@@ -488,5 +488,21 @@ footer {
     .recipe-grid {
         grid-template-columns: 1fr;
     }
+    .gallery-carousel {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .gallery-carousel img {
+        width: 100%;
+    }
+    .subscribe form {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .subscribe input {
+        width: 100%;
+    }
+    .subscribe button {
+        width: 100%;
+    }
 }
-
