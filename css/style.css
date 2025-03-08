@@ -17,6 +17,11 @@ a {
     color: #333;
 }
 
+button {
+margin-top: 10px;
+padding: 10px 20px;
+}
+
 ul {
     list-style: none;
 }
@@ -175,7 +180,7 @@ nav ul li a:hover {
 }
 
 .featured-product img {
-    width: 50%;
+    width: 30%;
     height: auto;
     margin: 0.5rem 0;
 }
