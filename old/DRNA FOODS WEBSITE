@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRNA Foods - Bakery Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="DRNA Foods Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#our-story">Our Story</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to DRNA Foods</h1>
+            <p>Your one-stop shop for delicious bakery products</p>
+            <div class="hero-illustration">
+                <img src="hero-illustration.svg" alt="Bakery Illustration">
+            </div>
+            <a href="#products" class="btn">View Products</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about fade-in">
+        <h2>About Us</h2>
+        <p>DRNA Foods Private Limited has been baking happiness since 20XX. Our passion for quality ingredients and traditional recipes ensures every bite is a delight.</p>
+        <p>We aim to bring joy to your table with our freshly baked goods.</p>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="our-story fade-in">
+        <div class="story-content">
+            <h2>Our Story</h2>
+            <p>DRNA Foods began in a small kitchen with a love for baking. Over the years, we’ve grown into a community favorite, committed to quality and tradition.</p>
+            <p>Our journey reflects our dedication to crafting exceptional bakery products.</p>
+        </div>
+        <div class="story-illustration">
+            <img src="our-story.svg" alt="Our Story Illustration">
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products fade-in">
+        <h2>Our Products</h2>
+        <div class="featured-product">
+            <img src="featured.jpg" alt="Featured Product">
+            <div class="featured-content">
+                <h3>Product of the Month: Chocolate Delight Cake</h3>
+                <p>A decadent chocolate cake with creamy frosting, perfect for any occasion.</p>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+        </div>
+        <div class="product-filter">
+            <button data-category="all">All</button>
+            <button data-category="cakes">Cakes</button>
+            <button data-category="breads">Breads</button>
+            <button data-category="pastries">Pastries</button>
+        </div>
+        <div class="product-grid">
+            <div class="product" data-category="cakes">
+                <img src="product1.jpg" alt="Chocolate Cake">
+                <h3>Chocolate Cake</h3>
+                <p>A rich, moist cake with deep chocolate flavor.</p>
+                <p class="price">$12.99</p>
+            </div>
+            <div class="product" data-category="breads">
+                <img src="product2.jpg" alt="Sourdough Bread">
+                <h3>Sourdough Bread</h3>
+                <p>Crusty, tangy bread made with natural fermentation.</p>
+                <p class="price">$5.99</p>
+            </div>
+            <div class="product" data-category="pastries">
+                <img src="product3.jpg" alt="Croissants">
+                <h3>Butter Croissants</h3>
+                <p>Flaky, buttery pastries baked to perfection.</p>
+                <p class="price">$3.49</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipes Section -->
+    <section id="recipes" class="recipes fade-in">
+        <h2>Recipes</h2>
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <img src="recipe1.jpg" alt="Chocolate Cake Recipe">
+                <div class="recipe-illustration">
+                    <img src="recipe-cake.svg" alt="Cake Illustration">
+                </div>
+                <h3>Chocolate Cake Recipe</h3>
+                <p>A simple yet delicious recipe using our finest ingredients.</p>
+                <a href="#" class="btn">View Recipe</a>
+            </div>
+            <!-- Add more recipe cards as needed -->
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery fade-in">
+        <h2>Gallery</h2>
+        <div class="gallery-carousel">
+            <img src="gallery1.jpg" alt="Gallery Image 1">
+            <img src="gallery2.jpg" alt="Gallery Image 2">
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact fade-in">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>Address: 123 Bakery Street, City, Country</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Email: info@drnafoods.com</p>
+        </div>
+        <form action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section id="subscribe" class="subscribe fade-in">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with our latest products and offers.</p>
+        <form action="#" method="post">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2023 DRNA Foods Private Limited. All rights reserved.</p>
+        <div class="social-media">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top">Top</button>
+</body>
+</html>
+
+
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f8f8f8;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #e0e0e0;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-illustration img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff6347;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff4500;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* About Section */
+.about {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Our Story Section */
+.our-story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #f8f8f8;
+}
+
+.story-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.story-illustration {
+    flex: 1;
+}
+
+.story-illustration img {
+    width: 100%;
+    height: auto;
+}
+
+/* Products Section */
+.products {
+    padding: 4rem 2rem;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.featured-product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.featured-product img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.featured-content {
+    padding-left: 2rem;
+}
+
+.featured-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.featured-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.product-filter {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.product-filter button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product-filter button:hover {
+    background-color: #ff4500;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin: 1rem 0;
+}
+
+.product p {
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-weight: bold;
+    color: #ff6347;
+}
+
+/* Recipes Section */
+.recipes {
+    padding: 4rem 2rem;
+    background-color: #f8f8f8;
+}
+
+.recipes h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.recipe-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.recipe-illustration img {
+    width: 50px;
+    height: auto;
+    margin: 0.5rem 0;
+}
+
+.recipe-card h3 {
+    margin: 1rem 0;
+}
+
+.recipe-card p {
+    margin-bottom: 1rem;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 4rem 2rem;
+}
+
+.gallery h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+}
+
+.gallery-carousel img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    background-color: #f8f8f8;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 0.75rem;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #ff4500;
+}
+
+/* Subscribe Section */
+.subscribe {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+.subscribe h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.subscribe p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.subscribe form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.subscribe input {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.subscribe button {
+    padding: 0.75rem 1.5rem;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+.social-media a {
+    margin: 0 0.5rem;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px 15px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .our-story {
+        flex-direction: column;
+    }
+    .story-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    .featured-product {
+        flex-direction: column;
+    }
+    .featured-product img {
+        width: 100%;
+    }
+    .featured-content {
+        padding-left: 0;
+        margin-top: 1rem;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Back to Top button functionality
+window.addEventListener('scroll', () => {
+    const backToTop = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+        backToTop.style.display = 'block';
+    } else {
+        backToTop.style.display = 'none';
+    }
+});
+
+document.getElementById('back-to-top').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Fade-in animations for sections
+const fadeInSections = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1 });
+
+fadeInSections.forEach(section => {
+    observer.observe(section);
+});
+
+// Product filter functionality
+const filterButtons = document.querySelectorAll('.product-filter button');
+const products = document.querySelectorAll('.product');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+        products.forEach(product => {
+            if (category === 'all' || product.getAttribute('data-category') === category) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    });
+});
