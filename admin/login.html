@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Admin Login - Bisty Bakery</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        body {
+            background: var(--dark);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-card {
+            max-width: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-card bg-white rounded shadow p-5 m-3">
+        <div class="text-center mb-4">
+            <h2 class="text-primary mb-0">Bisty Bakery</h2>
+            <p class="text-muted">Admin Panel</p>
+        </div>
+        <div id="login-error" class="alert alert-danger d-none" role="alert"></div>
+        <form id="login-form">
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control" name="username" required autofocus>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" required>
+            </div>
+            <button type="submit" id="login-submit" class="btn btn-primary w-100 rounded-pill py-2">Login</button>
+        </form>
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script>
+        window.BistyAPI.get("/admin/me").then(function () {
+            window.location.href = "index.html";
+        }).catch(function () {});
+
+        document.getElementById("login-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            var form = e.target;
+            var errorBox = document.getElementById("login-error");
+            var submitBtn = document.getElementById("login-submit");
+            errorBox.classList.add("d-none");
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Logging in...";
+
+            window.BistyAPI.post("/admin/login", {
+                username: form.username.value.trim(),
+                password: form.password.value
+            }).then(function () {
+                window.location.href = "index.html";
+            }).catch(function (err) {
+                errorBox.textContent = err.message || "Login failed";
+                errorBox.classList.remove("d-none");
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Login";
+            });
+        });
+    </script>
+</body>
+
+</html>

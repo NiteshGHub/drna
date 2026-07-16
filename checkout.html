@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Checkout - Bisty Bakery</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/drna logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid top-bar bg-dark text-light px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a class="small text-light" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="small text-light" href="#">Career</a></li>
+                    <li class="breadcrumb-item"><a class="small text-light" href="#">Terms</a></li>
+                    <li class="breadcrumb-item"><a class="small text-light" href="#">Privacy</a></li>
+                </ol>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn-lg-square text-primary border-end rounded-0" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn-lg-square text-primary border-end rounded-0" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn-lg-square text-primary border-end rounded-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn-lg-square text-primary pe-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="text-primary m-0">Bisty Bakery</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="products.html" class="nav-item nav-link">Products</a>
+                <a href="partner.html" class="nav-item nav-link">Partner With Us</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <div class="d-flex align-items-center">
+                <button class="btn btn-lg-square border border-light rounded-circle position-relative me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-label="Cart">
+                    <i class="fa fa-shopping-cart text-primary"></i>
+                    <span class="bisty-cart-count position-absolute badge rounded-pill bg-primary" style="top:-5px; right:-5px; display:none;">0</span>
+                </button>
+                <div class="d-none d-lg-flex">
+                    <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
+                        <i class="fa fa-phone text-primary"></i>
+                    </div>
+                    <div class="ps-3">
+                        <small class="text-primary mb-0">Call Us</small>
+                        <p class="text-light fs-5 mb-0">7415842447</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Cart Offcanvas Start -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 id="cartOffcanvasLabel">Your Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <div id="cartOffcanvasBody" class="flex-grow-1" style="overflow-y:auto;">
+                <p class="text-center text-muted my-5">Your cart is empty.</p>
+            </div>
+            <div id="cartOffcanvasFooter" class="border-top pt-3" style="display:none;">
+                <div class="d-flex justify-content-between mb-3">
+                    <strong>Total</strong>
+                    <strong class="bisty-cart-total text-primary">Rs 0.00</strong>
+                </div>
+                <a href="checkout.html" class="btn btn-primary w-100 rounded-pill py-2">Proceed to Checkout</a>
+            </div>
+        </div>
+    </div>
+    <!-- Cart Offcanvas End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container text-center py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Checkout</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="products.html">Products</a></li>
+                    <li class="breadcrumb-item active text-primary" aria-current="page">Checkout</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Checkout Start -->
+    <div class="container-xxl py-6">
+        <div class="container">
+
+            <!-- Empty cart state -->
+            <div id="checkout-empty" class="text-center py-5 d-none">
+                <i class="fa fa-shopping-cart fa-4x text-primary mb-4"></i>
+                <h3>Your cart is empty</h3>
+                <p class="text-muted">Add some delicious items before checking out.</p>
+                <a href="products.html" class="btn btn-primary rounded-pill py-3 px-5 mt-3">Browse Products</a>
+            </div>
+
+            <!-- Order success state -->
+            <div id="checkout-success" class="text-center py-5 d-none">
+                <i class="fa fa-check-circle fa-4x text-primary mb-4"></i>
+                <h3>Thank you! Your order has been placed.</h3>
+                <p class="text-muted" id="checkout-success-message"></p>
+                <p class="fw-bold">Our team will connect with you on WhatsApp to confirm and process payment.</p>
+                <a id="whatsapp-link" href="#" target="_blank" class="btn btn-primary rounded-pill py-3 px-5 mt-2">
+                    <i class="fab fa-whatsapp me-2"></i>Confirm on WhatsApp
+                </a>
+                <div class="mt-4">
+                    <a href="index.html" class="btn btn-link">Back to Home</a>
+                </div>
+            </div>
+
+            <!-- Checkout form + order summary -->
+            <div id="checkout-form-wrap" class="row g-5">
+                <div class="col-lg-7">
+                    <h4 class="mb-4">Delivery Details</h4>
+                    <div id="checkout-error" class="alert alert-danger d-none" role="alert"></div>
+                    <form id="checkout-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" name="customer_name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" name="phone" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Delivery Address *</label>
+                                <textarea class="form-control" name="address" rows="2" required></textarea>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">City *</label>
+                                <input type="text" class="form-control" name="city" value="Sagar" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Pincode *</label>
+                                <input type="text" class="form-control" name="pincode" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Order Notes (optional)</label>
+                                <textarea class="form-control" name="notes" rows="2" placeholder="E.g. preferred delivery time, special instructions"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" id="checkout-submit" class="btn btn-primary rounded-pill py-3 px-5 mt-4">
+                            Place Order
+                        </button>
+                    </form>
+                </div>
+                <div class="col-lg-5">
+                    <h4 class="mb-4">Order Summary</h4>
+                    <div id="checkout-summary-items" class="bg-light rounded p-4"></div>
+                    <div class="d-flex justify-content-between align-items-center bg-primary text-light rounded p-4 mt-3">
+                        <span class="fs-5">Total</span>
+                        <span class="fs-4 fw-bold" id="checkout-summary-total">Rs 0.00</span>
+                    </div>
+                    <p class="text-muted small mt-3">No online payment is required now. After placing your order, you'll be connected with our team on WhatsApp to confirm details and arrange payment.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Checkout End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer my-6 mb-0 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Bisty Bakery &amp; Cafe</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Industrial Area, Chanatariya, Sagar, Madhya Pradesh - 470004</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 7415842447 / +91 8982375165</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>drnafoods.privatelimited@gmail.com</p>
+                    <p class="mb-2"><small>FSSAI Lic. No. 11425470000034</small></p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="products.html">Our Products</a>
+                    <a class="btn btn-link" href="partner.html">Partner With Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright text-light py-4 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a href="#">Bistybakery.com</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    Designed By <a href="https://htmlcodex.com">Nitesh Soni</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script>
+        function renderSummary() {
+            var cart = window.BistyCart.getCart();
+            if (cart.length === 0) {
+                document.getElementById("checkout-empty").classList.remove("d-none");
+                document.getElementById("checkout-form-wrap").classList.add("d-none");
+                return false;
+            }
+
+            var itemsHtml = "";
+            cart.forEach(function (item) {
+                var label = item.name + (item.flavour ? ' (' + item.flavour + ')' : '');
+                itemsHtml += '<div class="d-flex justify-content-between py-2 border-bottom">' +
+                    '<span>' + label + ' <span class="text-muted">x' + item.quantity + '</span></span>' +
+                    '<span>Rs ' + (item.price * item.quantity).toFixed(2) + '</span>' +
+                    '</div>';
+            });
+            document.getElementById("checkout-summary-items").innerHTML = itemsHtml;
+            document.getElementById("checkout-summary-total").textContent = "Rs " + window.BistyCart.cartTotal().toFixed(2);
+            return true;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var hasItems = renderSummary();
+            if (!hasItems) return;
+
+            document.getElementById("checkout-form").addEventListener("submit", function (e) {
+                e.preventDefault();
+                var form = e.target;
+                var submitBtn = document.getElementById("checkout-submit");
+                var errorBox = document.getElementById("checkout-error");
+                errorBox.classList.add("d-none");
+
+                var cart = window.BistyCart.getCart();
+                var payload = {
+                    customer_name: form.customer_name.value.trim(),
+                    phone: form.phone.value.trim(),
+                    address: form.address.value.trim(),
+                    city: form.city.value.trim(),
+                    pincode: form.pincode.value.trim(),
+                    notes: form.notes.value.trim() || null,
+                    items: cart.map(function (item) {
+                        return { product_id: item.product_id, quantity: item.quantity, flavour: item.flavour || null };
+                    })
+                };
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Placing Order...";
+
+                window.BistyAPI.post("/orders", payload).then(function (result) {
+                    window.BistyCart.clearCart();
+                    document.getElementById("checkout-form-wrap").classList.add("d-none");
+                    document.getElementById("checkout-success").classList.remove("d-none");
+                    document.getElementById("checkout-success-message").textContent =
+                        "Order #" + result.order.id + " - Total Rs " + result.order.total_amount.toFixed(2);
+                    var link = document.getElementById("whatsapp-link");
+                    link.href = result.whatsapp_link;
+                    window.open(result.whatsapp_link, "_blank");
+                }).catch(function (err) {
+                    errorBox.textContent = err.message || "Something went wrong placing your order. Please try again.";
+                    errorBox.classList.remove("d-none");
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Place Order";
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
