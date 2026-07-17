@@ -2,11 +2,14 @@
 (function (window) {
     "use strict";
 
-    // Match whatever hostname the page was loaded from (localhost vs 127.0.0.1),
-    // otherwise the login cookie is set for one host and never sent back on the other.
-    var API_BASE_URL = window.location.hostname
+    // Local dev: match whatever hostname the page was loaded from (localhost vs
+    // 127.0.0.1), otherwise the login cookie is set for one host and never sent
+    // back on the other. Anywhere else (deployed), the frontend and backend are
+    // on different hosts entirely, so point straight at the live backend.
+    var isLocalDev = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost";
+    var API_BASE_URL = isLocalDev
         ? window.location.protocol + "//" + window.location.hostname + ":8000/api"
-        : "http://127.0.0.1:8000/api";
+        : "https://drna-backend.onrender.com/api";
 
     function request(path, options) {
         options = options || {};
