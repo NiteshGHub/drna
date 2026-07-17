@@ -50,7 +50,7 @@
 
     window.BistyAPI.imageUrl = function (imageUrl) {
         if (!imageUrl) return "img/product-1.jpg";
-        if (imageUrl.indexOf("http") === 0) return imageUrl;
+        if (imageUrl.indexOf("http") === 0 || imageUrl.indexOf("data:") === 0) return imageUrl;
         return API_BASE_URL.replace(/\/api$/, "") + imageUrl;
     };
 })(window);
