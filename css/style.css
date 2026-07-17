@@ -364,7 +364,7 @@ h6,
     background: var(--primary) !important;
 }
 
-.product-item:hover *:not(select):not(option) {
+.product-item:hover *:not(select):not(option):not(input):not(button):not(.btn) {
     color: var(--light) !important;
 }
 
