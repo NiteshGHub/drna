@@ -365,7 +365,7 @@ h6,
 }
 
 .product-item:hover * {
-    color: var(--light);
+    color: var(--light) !important;
 }
 
 .product-item:hover .border-primary {
