@@ -7,8 +7,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
     <style>
         body {
             background: var(--dark);
@@ -44,10 +44,10 @@
         </form>
     </div>
 
-    <script src="../js/api.js"></script>
+    <script src="/js/api.js"></script>
     <script>
         window.BistyAPI.get("/admin/me").then(function () {
-            window.location.href = "index.html";
+            window.location.href = "/admin/index.html";
         }).catch(function () {});
 
         document.getElementById("login-form").addEventListener("submit", function (e) {
@@ -63,7 +63,7 @@
                 username: form.username.value.trim(),
                 password: form.password.value
             }).then(function () {
-                window.location.href = "index.html";
+                window.location.href = "/admin/index.html";
             }).catch(function (err) {
                 errorBox.textContent = err.message || "Login failed";
                 errorBox.classList.remove("d-none");

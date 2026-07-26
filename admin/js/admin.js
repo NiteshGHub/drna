@@ -19,12 +19,12 @@
     // ---------- Auth guard ----------
 
     window.BistyAPI.get("/admin/me").catch(function () {
-        window.location.href = "login.html";
+        window.location.href = "/admin/login.html";
     });
 
     document.getElementById("logout-btn").addEventListener("click", function () {
         window.BistyAPI.post("/admin/logout", {}).finally(function () {
-            window.location.href = "login.html";
+            window.location.href = "/admin/login.html";
         });
     });
 
